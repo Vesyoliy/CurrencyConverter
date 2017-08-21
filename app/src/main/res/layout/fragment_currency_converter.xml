@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/converter_main_background">
+
+    <LinearLayout
+        android:id="@+id/converter_progress_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/converter_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="@dimen/converter_progress_layout_space"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_progress_string"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/converter_controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/TopControlsContainer"
+        android:padding="@dimen/converter_controls_padding"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/ControlsContainer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LabelText"
+                android:text="@string/label_from"/>
+
+            <Spinner
+                android:id="@+id/converter_initial_currency_name_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/converter_initial_currency_value_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/converter_controls_padding"
+                android:paddingRight="@dimen/converter_controls_padding"
+                android:inputType="numberDecimal"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLines="1"
+                android:hint="@string/incoming_currency_hint"
+                android:textSize="@dimen/converter_value_text_size"/>
+
+        </LinearLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="@dimen/converter_controls_padding"
+            android:layout_height="@dimen/converter_controls_padding" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/ControlsContainer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LabelText"
+                android:text="@string/label_to"/>
+
+            <Spinner
+                android:id="@+id/converter_result_currency_name_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/converter_result_currency_value_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/converter_controls_padding"
+                android:paddingStart="@dimen/converter_controls_padding"
+                android:paddingRight="@dimen/converter_controls_padding"
+                android:paddingEnd="@dimen/converter_controls_padding"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textSize="@dimen/converter_value_text_size"
+                tools:text="150,5454"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

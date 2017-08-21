@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Конвертер Валют</string>
+
+    <!-- Currency Converter Screen -->
+    <string name="incoming_currency_hint">Введите значение</string>
+    <string name="loading_progress_string">Идет загрузка...</string>
+    <string name="loading_error">Не удалось загрузить курсы валют</string>
+    <string name="label_from">Из</string>
+    <string name="label_to">В</string>
+</resources>
